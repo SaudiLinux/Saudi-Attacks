@@ -1,0 +1,11 @@
+2025-06-27 07:43:05,569 - SaudiAttacks - INFO - »œ¡ «·›Õ’ ··Âœ›: example.com
+2025-06-27 07:43:05,575 - SaudiAttacks - INFO - »œ¡ Ã„⁄ «·„⁄·Ê„«  ⁄‰ «·Âœ›: example.com
+2025-06-27 07:43:28,569 - SaudiAttacks - INFO - «ﬂ „«· Ã„⁄ «·„⁄·Ê„«  ⁄‰ «·Âœ›: example.com
+2025-06-27 07:43:28,570 - SaudiAttacks - INFO -  „  ≈÷«›… ‰ «∆Ã „‰ info_example.com ≈·Ï «· ﬁ—Ì—
+2025-06-27 07:43:28,577 - SaudiAttacks - ERROR - Œÿ√ ›Ì  ÂÌ∆… PortScanner: 'nmap program was not found in path. PATH is : C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Google\\chrome-win64\\chrome-win64;C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\;C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python311\\;C:\\Users\\Dell\\AppData\\Local\\pnpm;C:\\Users\\Dell\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Dell\\AppData\\Roaming\\npm;C:\\Users\\Dell\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Google\\chromedriver;C:\\Users\\Dell\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;c:\\Users\\Dell\\.trae\\extensions\\ms-python.debugpy-2025.6.0-win32-x64\\bundled\\scripts\\noConfigScripts'
+2025-06-27 07:43:28,606 - SaudiAttacks - ERROR - ·„ Ì „  ÂÌ∆… PortScanner »‘ﬂ· ’ÕÌÕ.  √ﬂœ „‰  À»Ì  Nmap Ê≈÷«› Â ≈·Ï „ €Ì— PATH.
+2025-06-27 07:43:28,608 - SaudiAttacks - WARNING -  ŒÿÌ ›Õ’ «·„‰«›– »”»» ⁄œ„  Ê›— Nmap: ·„ Ì „  ÂÌ∆… PortScanner »‘ﬂ· ’ÕÌÕ.  √ﬂœ „‰  À»Ì  Nmap Ê≈÷«› Â ≈·Ï „ €Ì— PATH.
+2025-06-27 07:43:29,417 - SaudiAttacks - INFO - ≈‰‘«¡ «· ﬁ—Ì— ›Ì report_20250627_074305.html
+2025-06-27 07:43:29,427 - SaudiAttacks - INFO -  „ ≈‰‘«¡ «· ﬁ—Ì— »‰Ã«Õ ›Ì report_20250627_074305.html
+2025-06-27 07:43:29,428 - SaudiAttacks - INFO -  „ ≈‰‘«¡ „·› JSON ›Ì report_20250627_074305.json
+2025-06-27 07:43:29,430 - SaudiAttacks - INFO -  „ ≈‰‘«¡ «· ﬁ—Ì—: report_20250627_074305.html
