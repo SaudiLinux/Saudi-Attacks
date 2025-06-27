@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: أسئلة المجتمع
+    url: https://github.com/SaudiLinux/SaudiAttacks/discussions
+    about: يرجى طرح الأسئلة العامة والمناقشات هنا.
+  - name: سياسة الأمان
+    url: https://github.com/SaudiLinux/SaudiAttacks/blob/main/SECURITY.md
+    about: يرجى الإبلاغ عن الثغرات الأمنية باتباع سياسة الأمان الخاصة بنا.
