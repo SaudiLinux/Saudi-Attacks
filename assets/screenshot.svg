@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <!-- خلفية الترمينال -->
+  <rect width="800" height="500" fill="#1e1e1e" rx="10" ry="10" />
+  
+  <!-- شريط العنوان -->
+  <rect width="800" height="30" fill="#333333" rx="10" ry="10" />
+  <circle cx="20" cy="15" r="7" fill="#ff5f57" />
+  <circle cx="40" cy="15" r="7" fill="#febc2e" />
+  <circle cx="60" cy="15" r="7" fill="#28c840" />
+  <text x="400" y="20" font-family="monospace" font-size="12" text-anchor="middle" fill="#cccccc">Terminal - SaudiAttacks</text>
+  
+  <!-- محتوى الترمينال -->
+  <g font-family="monospace" font-size="14" fill="#ffffff">
+    <!-- شعار الأداة -->
+    <text x="20" y="60" fill="#4CAF50">  ██████  ▄▄▄       █    ██ ▓█████▄  ██▓    ▄▄▄     ▄▄▄█████▓▄▄▄█████▓ ▄▄▄       ▄████▄   ██ ▄█▀  ██████ </text>
+    <text x="20" y="80" fill="#4CAF50">▒██    ▒ ▒████▄     ██  ▓██▒▒██▀ ██▌▓██▒   ▒████▄   ▓  ██▒ ▓▒▓  ██▒ ▓▒▒████▄    ▒██▀ ▀█   ██▄█▒ ▒██    ▒ </text>
+    <text x="20" y="100" fill="#4CAF50">░ ▓██▄   ▒██  ▀█▄  ▓██  ▒██░░██   █▌▒██░   ▒██  ▀█▄ ▒ ▓██░ ▒░▒ ▓██░ ▒░▒██  ▀█▄  ▒▓█    ▄ ▓███▄░ ░ ▓██▄   </text>
+    <text x="20" y="120" fill="#4CAF50">  ▒   ██▒░██▄▄▄▄██ ▓▓█  ░██░░▓█▄   ▌▒██░   ░██▄▄▄▄██░ ▓██▓ ░ ░ ▓██▓ ░ ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄   ▒   ██▒</text>
+    <text x="20" y="140" fill="#4CAF50">▒██████▒▒ ▓█   ▓██▒▒█████▓ ░▒████▓ ░██████▒▓█   ▓██▒ ▒██▒ ░   ▒██▒ ░  ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄▒██████▒▒</text>
+    
+    <!-- معلومات الأداة -->
+    <text x="20" y="180" fill="#00bcd4">================================================================================</text>
+    <text x="20" y="200" fill="#ffffff">  SaudiAttacks - أداة اختبار اختراق آلي</text>
+    <text x="20" y="220" fill="#ffffff">  المطور: Saudi Linux | البريد الإلكتروني: SaudiLinux7@gmail.com</text>
+    <text x="20" y="240" fill="#ffffff">  النظام: Linux 5.15.0-kali3-amd64 | التاريخ: 2023-06-15 14:30:45</text>
+    <text x="20" y="260" fill="#00bcd4">================================================================================</text>
+    
+    <!-- معلومات الهدف -->
+    <text x="20" y="290" fill="#ffeb3b">[*] الهدف: example.com</text>
+    <text x="20" y="310" fill="#ffeb3b">[*] وقت البدء: 2023-06-15 14:30:48</text>
+    <text x="20" y="330" fill="#ffeb3b">[*] نوع الفحص: اختبار اختراق آلي</text>
+    <text x="20" y="350" fill="#00bcd4">------------------------------------------------------------</text>
+    
+    <!-- نتائج الفحص -->
+    <text x="20" y="380" fill="#4CAF50">[+] جمع المعلومات...</text>
+    <text x="40" y="400" fill="#ffffff">- IP: 93.184.216.34</text>
+    <text x="40" y="420" fill="#ffffff">- اسم المضيف: example.com</text>
+    <text x="40" y="440" fill="#ffffff">- خادم الويب: nginx/1.18.0</text>
+    <text x="20" y="470" fill="#4CAF50">[+] فحص المنافذ...</text>
+  </g>
+</svg>

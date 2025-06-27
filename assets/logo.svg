@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- خلفية دائرية -->
+  <circle cx="100" cy="100" r="95" fill="#1a1a1a" />
+  
+  <!-- حدود الدائرة -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#4CAF50" stroke-width="3" />
+  
+  <!-- رمز الدرع -->
+  <path d="M100 30 L50 50 L50 110 C50 140 100 170 100 170 C100 170 150 140 150 110 L150 50 Z" fill="#4CAF50" />
+  
+  <!-- رمز القفل -->
+  <rect x="85" y="90" width="30" height="25" rx="5" fill="#1a1a1a" />
+  <rect x="75" y="70" width="50" height="30" rx="5" fill="#1a1a1a" />
+  
+  <!-- رمز العلم السعودي المبسط -->
+  <rect x="80" y="60" width="40" height="20" fill="#006c35" />
+  <path d="M95 65 L105 65 L105 75 L95 75 Z" fill="white" />
+  <path d="M100 65 L100 75 M95 70 L105 70" stroke="white" stroke-width="1.5" />
+  
+  <!-- نص SaudiAttacks -->
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">SaudiAttacks</text>
+  
+  <!-- رموز الهجوم -->
+  <path d="M70 130 L80 140 L70 150" fill="none" stroke="#ff5722" stroke-width="2" />
+  <path d="M130 130 L120 140 L130 150" fill="none" stroke="#ff5722" stroke-width="2" />
+  <path d="M90 145 L100 155 L110 145" fill="none" stroke="#ff5722" stroke-width="2" />
+</svg>
