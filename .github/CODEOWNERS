@@ -1,0 +1,29 @@
+# هذا الملف يحدد المالكين التلقائيين لأجزاء مختلفة من الكود
+# عند إنشاء طلب سحب، سيتم تعيين المراجعين تلقائيًا بناءً على هذا الملف
+# مزيد من المعلومات: https://help.github.com/articles/about-codeowners/
+
+# المالك الافتراضي لكل شيء في المستودع
+* @SaudiLinux
+
+# مالكو الوحدات الرئيسية
+/saudi_attacks.py @SaudiLinux
+/info_gathering.py @SaudiLinux
+/port_scanner.py @SaudiLinux
+/vulnerability_scanner.py @SaudiLinux
+/web_scanner.py @SaudiLinux
+/cms_scanner.py @SaudiLinux
+/report_generator.py @SaudiLinux
+/utils.py @SaudiLinux
+/banner.py @SaudiLinux
+
+# مالكو الوثائق
+/docs/ @SaudiLinux
+/README.md @SaudiLinux
+/CONTRIBUTING.md @SaudiLinux
+/CODE_OF_CONDUCT.md @SaudiLinux
+/SECURITY.md @SaudiLinux
+
+# مالكو ملفات الإعداد
+/setup.py @SaudiLinux
+/requirements.txt @SaudiLinux
+/.github/ @SaudiLinux

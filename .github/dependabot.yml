@@ -1,0 +1,33 @@
+version: 2
+updates:
+  # تكوين تحديثات تبعيات pip
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    # تعيين المراجعين لطلبات السحب
+    assignees:
+      - "SaudiLinux"
+    # تعيين التسميات لطلبات السحب
+    labels:
+      - "dependencies"
+      - "security"
+    # تعيين فرع مستهدف لطلبات السحب
+    target-branch: "main"
+    # تكوين استراتيجية الدمج
+    versioning-strategy: auto
+
+  # تكوين تحديثات GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 5
+    # تعيين المراجعين لطلبات السحب
+    assignees:
+      - "SaudiLinux"
+    # تعيين التسميات لطلبات السحب
+    labels:
+      - "dependencies"
+      - "github-actions"
