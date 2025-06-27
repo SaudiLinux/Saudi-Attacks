@@ -1,0 +1,195 @@
+{
+    "info_example.com": {
+        "dns_info": {
+            "a_records": [
+                "23.215.0.138",
+                "23.192.228.84",
+                "96.7.128.198",
+                "23.192.228.80",
+                "96.7.128.175",
+                "23.215.0.136"
+            ],
+            "mx_records": [
+                "0 ."
+            ],
+            "ns_records": [],
+            "txt_records": [
+                "\"v=spf1 -all\"",
+                "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\""
+            ]
+        },
+        "whois_info": {
+            "domain_name": "EXAMPLE.COM",
+            "registrar": "RESERVED-Internet Assigned Numbers Authority",
+            "creation_date": "1995-08-14 04:00:00",
+            "expiration_date": "2025-08-13 04:00:00",
+            "name_servers": [
+                "A.IANA-SERVERS.NET",
+                "B.IANA-SERVERS.NET"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": null,
+            "dnssec": "signedDelegation",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "zipcode": null,
+            "country": null
+        },
+        "network_info": {
+            "geo": {
+                "ip": "96.7.128.175",
+                "hostname": "a96-7-128-175.deploy.static.akamaitechnologies.com",
+                "city": "El Segundo",
+                "region": "California",
+                "country": "US",
+                "loc": "33.9192,-118.4165",
+                "org": "AS20940 Akamai International B.V.",
+                "postal": "90245",
+                "timezone": "America/Los_Angeles",
+                "readme": "https://ipinfo.io/missingauth"
+            },
+            "rbl": {
+                "zen.spamhaus.org": false,
+                "bl.spamcop.net": false,
+                "dnsbl.sorbs.net": false
+            }
+        },
+        "web_info": {
+            "http": {
+                "available": true,
+                "status_code": 200,
+                "title": "Example Domain",
+                "server": "Unknown",
+                "headers": {
+                    "Accept-Ranges": "bytes",
+                    "Content-Type": "text/html",
+                    "ETag": "\"84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134\"",
+                    "Last-Modified": "Mon, 13 Jan 2025 20:11:20 GMT",
+                    "Vary": "Accept-Encoding",
+                    "Content-Encoding": "gzip",
+                    "Cache-Control": "max-age=2683",
+                    "Date": "Fri, 27 Jun 2025 04:44:13 GMT",
+                    "Content-Length": "648",
+                    "Connection": "keep-alive"
+                }
+            },
+            "https": {
+                "available": true,
+                "status_code": 200,
+                "title": "Example Domain",
+                "server": "Unknown",
+                "headers": {
+                    "Accept-Ranges": "bytes",
+                    "Content-Type": "text/html",
+                    "ETag": "\"84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134\"",
+                    "Last-Modified": "Mon, 13 Jan 2025 20:11:20 GMT",
+                    "Vary": "Accept-Encoding",
+                    "Content-Encoding": "gzip",
+                    "Cache-Control": "max-age=3153",
+                    "Date": "Fri, 27 Jun 2025 04:44:14 GMT",
+                    "Alt-Svc": "h3=\":443\"; ma=93600,h3-29=\":443\"; ma=93600",
+                    "Content-Length": "648",
+                    "Connection": "keep-alive"
+                }
+            }
+        },
+        "additional_info": {}
+    },
+    "web_example.com": {
+        "web_server_info": {
+            "http": {
+                "status_code": 200,
+                "server": "Unknown",
+                "powered_by": "Unknown",
+                "content_type": "text/html",
+                "title": "Example Domain",
+                "final_url": "http://example.com/",
+                "redirect": true,
+                "headers": {
+                    "Accept-Ranges": "bytes",
+                    "Content-Type": "text/html",
+                    "ETag": "\"84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134\"",
+                    "Last-Modified": "Mon, 13 Jan 2025 20:11:20 GMT",
+                    "Vary": "Accept-Encoding",
+                    "Content-Encoding": "gzip",
+                    "Cache-Control": "max-age=2681",
+                    "Date": "Fri, 27 Jun 2025 04:44:15 GMT",
+                    "Content-Length": "648",
+                    "Connection": "keep-alive"
+                }
+            },
+            "https": {
+                "status_code": 200,
+                "server": "Unknown",
+                "powered_by": "Unknown",
+                "content_type": "text/html",
+                "title": "Example Domain",
+                "final_url": "https://example.com/",
+                "redirect": true,
+                "headers": {
+                    "Accept-Ranges": "bytes",
+                    "Content-Type": "text/html",
+                    "ETag": "\"84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134\"",
+                    "Last-Modified": "Mon, 13 Jan 2025 20:11:20 GMT",
+                    "Vary": "Accept-Encoding",
+                    "Content-Encoding": "gzip",
+                    "Cache-Control": "max-age=3151",
+                    "Date": "Fri, 27 Jun 2025 04:44:16 GMT",
+                    "Alt-Svc": "h3=\":443\"; ma=93600,h3-29=\":443\"; ma=93600",
+                    "Content-Length": "648",
+                    "Connection": "keep-alive"
+                }
+            }
+        },
+        "security_headers": {
+            "Strict-Transport-Security": {
+                "present": false
+            },
+            "Content-Security-Policy": {
+                "present": false
+            },
+            "X-Content-Type-Options": {
+                "present": false
+            },
+            "X-Frame-Options": {
+                "present": false
+            },
+            "X-XSS-Protection": {
+                "present": false
+            },
+            "Referrer-Policy": {
+                "present": false
+            },
+            "Feature-Policy": {
+                "present": false
+            },
+            "Permissions-Policy": {
+                "present": false
+            }
+        },
+        "sensitive_files": [],
+        "api_endpoints": [],
+        "input_forms": [],
+        "cors_config": {
+            "headers": {
+                "Access-Control-Allow-Origin": null,
+                "Access-Control-Allow-Credentials": null,
+                "Access-Control-Allow-Methods": null,
+                "Access-Control-Allow-Headers": null,
+                "Access-Control-Expose-Headers": null
+            },
+            "insecure": false
+        },
+        "csp_config": {
+            "header": null,
+            "missing": true
+        }
+    }
+}

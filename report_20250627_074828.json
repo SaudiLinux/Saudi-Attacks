@@ -1,0 +1,266 @@
+{
+    "info_example.com": {
+        "dns_info": {
+            "a_records": [
+                "23.192.228.84",
+                "96.7.128.175",
+                "96.7.128.198",
+                "23.215.0.136",
+                "23.215.0.138",
+                "23.192.228.80"
+            ],
+            "mx_records": [
+                "0 ."
+            ],
+            "ns_records": [],
+            "txt_records": [
+                "\"v=spf1 -all\"",
+                "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\""
+            ]
+        },
+        "whois_info": {
+            "domain_name": "EXAMPLE.COM",
+            "registrar": "RESERVED-Internet Assigned Numbers Authority",
+            "creation_date": "1995-08-14 04:00:00",
+            "expiration_date": "2025-08-13 04:00:00",
+            "name_servers": [
+                "A.IANA-SERVERS.NET",
+                "B.IANA-SERVERS.NET"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": null,
+            "dnssec": "signedDelegation",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "zipcode": null,
+            "country": null
+        },
+        "network_info": {
+            "geo": {
+                "ip": "96.7.128.198",
+                "hostname": "a96-7-128-198.deploy.static.akamaitechnologies.com",
+                "city": "El Segundo",
+                "region": "California",
+                "country": "US",
+                "loc": "33.9192,-118.4165",
+                "org": "AS20940 Akamai International B.V.",
+                "postal": "90245",
+                "timezone": "America/Los_Angeles",
+                "readme": "https://ipinfo.io/missingauth"
+            },
+            "rbl": {
+                "zen.spamhaus.org": false,
+                "bl.spamcop.net": false,
+                "dnsbl.sorbs.net": false
+            }
+        },
+        "web_info": {
+            "http": {
+                "available": true,
+                "status_code": 200,
+                "title": "Example Domain",
+                "server": "Unknown",
+                "headers": {
+                    "Accept-Ranges": "bytes",
+                    "Content-Type": "text/html",
+                    "ETag": "\"84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134\"",
+                    "Last-Modified": "Mon, 13 Jan 2025 20:11:20 GMT",
+                    "Vary": "Accept-Encoding",
+                    "Content-Encoding": "gzip",
+                    "Cache-Control": "max-age=658",
+                    "Date": "Fri, 27 Jun 2025 04:48:48 GMT",
+                    "Content-Length": "648",
+                    "Connection": "keep-alive"
+                }
+            },
+            "https": {
+                "available": true,
+                "status_code": 200,
+                "title": "Example Domain",
+                "server": "Unknown",
+                "headers": {
+                    "Accept-Ranges": "bytes",
+                    "Content-Type": "text/html",
+                    "ETag": "\"84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134\"",
+                    "Last-Modified": "Mon, 13 Jan 2025 20:11:20 GMT",
+                    "Vary": "Accept-Encoding",
+                    "Content-Encoding": "gzip",
+                    "Content-Length": "648",
+                    "Cache-Control": "max-age=388",
+                    "Date": "Fri, 27 Jun 2025 04:48:49 GMT",
+                    "Alt-Svc": "h3=\":443\"; ma=93600,h3-29=\":443\"; ma=93600",
+                    "Connection": "keep-alive"
+                }
+            }
+        },
+        "additional_info": {}
+    },
+    "vuln_example.com": {
+        "known_vulnerabilities": [
+            {
+                "id": "heartbleed",
+                "name": "Heartbleed (CVE-2014-0160)",
+                "description": "\u062b\u063a\u0631\u0629 \u0641\u064a \u0645\u0643\u062a\u0628\u0629 OpenSSL \u062a\u0633\u0645\u062d \u0628\u062a\u0633\u0631\u064a\u0628 \u0627\u0644\u0630\u0627\u0643\u0631\u0629",
+                "severity": "\u0639\u0627\u0644\u064a\u0629",
+                "details": "\u0627\u0644\u0645\u0646\u0641\u0630 443 \u064a\u0633\u062a\u062e\u062f\u0645 \u0625\u0635\u062f\u0627\u0631 SSL/TLS \u0642\u062f\u064a\u0645: TLSv1.3"
+            }
+        ],
+        "ssl_tls_issues": [
+            {
+                "type": "protocol",
+                "name": "\u0628\u0631\u0648\u062a\u0648\u0643\u0648\u0644 SSL/TLS \u0642\u062f\u064a\u0645",
+                "description": "\u0627\u0644\u062e\u0627\u062f\u0645 \u064a\u062f\u0639\u0645 \u0628\u0631\u0648\u062a\u0648\u0643\u0648\u0644 SSL/TLS \u0627\u0644\u0642\u062f\u064a\u0645 \u0648\u0627\u0644\u0636\u0639\u064a\u0641",
+                "severity": "\u0645\u062a\u0648\u0633\u0637\u0629",
+                "port": 443,
+                "details": "\u0627\u0644\u0634\u0641\u0631\u0629 \u0627\u0644\u0645\u0633\u062a\u062e\u062f\u0645\u0629: TLS_AES_256_GCM_SHA384"
+            }
+        ],
+        "exposed_services": [],
+        "misconfigurations": [
+            {
+                "type": "missing_header",
+                "name": "\u0631\u0623\u0633 HTTP \u0627\u0644\u0623\u0645\u0646\u064a \u0645\u0641\u0642\u0648\u062f: Strict-Transport-Security",
+                "description": "\u0631\u0623\u0633 HTTP \u0627\u0644\u0623\u0645\u0646\u064a Strict-Transport-Security (HSTS) \u0645\u0641\u0642\u0648\u062f",
+                "severity": "\u0645\u0646\u062e\u0641\u0636\u0629",
+                "url": "https://example.com"
+            },
+            {
+                "type": "missing_header",
+                "name": "\u0631\u0623\u0633 HTTP \u0627\u0644\u0623\u0645\u0646\u064a \u0645\u0641\u0642\u0648\u062f: Content-Security-Policy",
+                "description": "\u0631\u0623\u0633 HTTP \u0627\u0644\u0623\u0645\u0646\u064a Content-Security-Policy (CSP) \u0645\u0641\u0642\u0648\u062f",
+                "severity": "\u0645\u0646\u062e\u0641\u0636\u0629",
+                "url": "https://example.com"
+            },
+            {
+                "type": "missing_header",
+                "name": "\u0631\u0623\u0633 HTTP \u0627\u0644\u0623\u0645\u0646\u064a \u0645\u0641\u0642\u0648\u062f: X-Content-Type-Options",
+                "description": "\u0631\u0623\u0633 HTTP \u0627\u0644\u0623\u0645\u0646\u064a X-Content-Type-Options (X-Content-Type-Options) \u0645\u0641\u0642\u0648\u062f",
+                "severity": "\u0645\u0646\u062e\u0641\u0636\u0629",
+                "url": "https://example.com"
+            },
+            {
+                "type": "missing_header",
+                "name": "\u0631\u0623\u0633 HTTP \u0627\u0644\u0623\u0645\u0646\u064a \u0645\u0641\u0642\u0648\u062f: X-Frame-Options",
+                "description": "\u0631\u0623\u0633 HTTP \u0627\u0644\u0623\u0645\u0646\u064a X-Frame-Options (X-Frame-Options) \u0645\u0641\u0642\u0648\u062f",
+                "severity": "\u0645\u0646\u062e\u0641\u0636\u0629",
+                "url": "https://example.com"
+            },
+            {
+                "type": "missing_header",
+                "name": "\u0631\u0623\u0633 HTTP \u0627\u0644\u0623\u0645\u0646\u064a \u0645\u0641\u0642\u0648\u062f: X-XSS-Protection",
+                "description": "\u0631\u0623\u0633 HTTP \u0627\u0644\u0623\u0645\u0646\u064a X-XSS-Protection (X-XSS-Protection) \u0645\u0641\u0642\u0648\u062f",
+                "severity": "\u0645\u0646\u062e\u0641\u0636\u0629",
+                "url": "https://example.com"
+            }
+        ]
+    },
+    "web_example.com": {
+        "web_server_info": {
+            "http": {
+                "status_code": 200,
+                "server": "Unknown",
+                "powered_by": "Unknown",
+                "content_type": "text/html",
+                "title": "Example Domain",
+                "final_url": "http://example.com/",
+                "redirect": true,
+                "headers": {
+                    "Accept-Ranges": "bytes",
+                    "Content-Type": "text/html",
+                    "ETag": "\"84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134\"",
+                    "Last-Modified": "Mon, 13 Jan 2025 20:11:20 GMT",
+                    "Vary": "Accept-Encoding",
+                    "Content-Encoding": "gzip",
+                    "Cache-Control": "max-age=588",
+                    "Date": "Fri, 27 Jun 2025 04:49:58 GMT",
+                    "Content-Length": "648",
+                    "Connection": "keep-alive"
+                }
+            },
+            "https": {
+                "status_code": 200,
+                "server": "Unknown",
+                "powered_by": "Unknown",
+                "content_type": "text/html",
+                "title": "Example Domain",
+                "final_url": "https://example.com/",
+                "redirect": true,
+                "headers": {
+                    "Accept-Ranges": "bytes",
+                    "Content-Type": "text/html",
+                    "ETag": "\"84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134\"",
+                    "Last-Modified": "Mon, 13 Jan 2025 20:11:20 GMT",
+                    "Vary": "Accept-Encoding",
+                    "Content-Encoding": "gzip",
+                    "Content-Length": "648",
+                    "Cache-Control": "max-age=3558",
+                    "Date": "Fri, 27 Jun 2025 04:49:59 GMT",
+                    "Alt-Svc": "h3=\":443\"; ma=93600,h3-29=\":443\"; ma=93600",
+                    "Connection": "keep-alive"
+                }
+            }
+        },
+        "security_headers": {
+            "Strict-Transport-Security": {
+                "present": false
+            },
+            "Content-Security-Policy": {
+                "present": false
+            },
+            "X-Content-Type-Options": {
+                "present": false
+            },
+            "X-Frame-Options": {
+                "present": false
+            },
+            "X-XSS-Protection": {
+                "present": false
+            },
+            "Referrer-Policy": {
+                "present": false
+            },
+            "Feature-Policy": {
+                "present": false
+            },
+            "Permissions-Policy": {
+                "present": false
+            }
+        },
+        "sensitive_files": [],
+        "api_endpoints": [],
+        "input_forms": [],
+        "cors_config": {
+            "headers": {
+                "Access-Control-Allow-Origin": null,
+                "Access-Control-Allow-Credentials": null,
+                "Access-Control-Allow-Methods": null,
+                "Access-Control-Allow-Headers": null,
+                "Access-Control-Expose-Headers": null
+            },
+            "insecure": false
+        },
+        "csp_config": {
+            "header": null,
+            "missing": true
+        }
+    },
+    "wordpress_example.com": {
+        "cms_info": {
+            "cms_type": null,
+            "cms_version": null
+        }
+    },
+    "joomla_example.com": {
+        "cms_info": {
+            "cms_type": null,
+            "cms_version": null
+        }
+    }
+}

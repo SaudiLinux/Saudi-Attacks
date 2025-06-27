@@ -1,0 +1,105 @@
+{
+    "info_example.com": {
+        "dns_info": {
+            "a_records": [
+                "23.215.0.138",
+                "96.7.128.175",
+                "96.7.128.198",
+                "23.192.228.80",
+                "23.192.228.84",
+                "23.215.0.136"
+            ],
+            "mx_records": [
+                "0 ."
+            ],
+            "ns_records": [],
+            "txt_records": [
+                "\"v=spf1 -all\"",
+                "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\""
+            ]
+        },
+        "whois_info": {
+            "domain_name": "EXAMPLE.COM",
+            "registrar": "RESERVED-Internet Assigned Numbers Authority",
+            "creation_date": "1995-08-14 04:00:00",
+            "expiration_date": "2025-08-13 04:00:00",
+            "name_servers": [
+                "A.IANA-SERVERS.NET",
+                "B.IANA-SERVERS.NET"
+            ],
+            "status": [
+                "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+                "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+                "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+            ],
+            "emails": null,
+            "dnssec": "signedDelegation",
+            "name": null,
+            "org": null,
+            "address": null,
+            "city": null,
+            "state": null,
+            "zipcode": null,
+            "country": null
+        },
+        "network_info": {
+            "geo": {
+                "ip": "23.215.0.138",
+                "hostname": "a23-215-0-138.deploy.static.akamaitechnologies.com",
+                "city": "Ashburn",
+                "region": "Virginia",
+                "country": "US",
+                "loc": "39.0437,-77.4875",
+                "org": "AS20940 Akamai International B.V.",
+                "postal": "20147",
+                "timezone": "America/New_York",
+                "readme": "https://ipinfo.io/missingauth"
+            },
+            "rbl": {
+                "zen.spamhaus.org": false,
+                "bl.spamcop.net": false,
+                "dnsbl.sorbs.net": false
+            }
+        },
+        "web_info": {
+            "http": {
+                "available": true,
+                "status_code": 200,
+                "title": "Example Domain",
+                "server": "Unknown",
+                "headers": {
+                    "Accept-Ranges": "bytes",
+                    "Content-Type": "text/html",
+                    "ETag": "\"84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134\"",
+                    "Last-Modified": "Mon, 13 Jan 2025 20:11:20 GMT",
+                    "Vary": "Accept-Encoding",
+                    "Content-Encoding": "gzip",
+                    "Cache-Control": "max-age=2731",
+                    "Date": "Fri, 27 Jun 2025 04:43:25 GMT",
+                    "Content-Length": "648",
+                    "Connection": "keep-alive"
+                }
+            },
+            "https": {
+                "available": true,
+                "status_code": 200,
+                "title": "Example Domain",
+                "server": "Unknown",
+                "headers": {
+                    "Accept-Ranges": "bytes",
+                    "Content-Type": "text/html",
+                    "ETag": "\"84238dfc8092e5d9c0dac8ef93371a07:1736799080.121134\"",
+                    "Last-Modified": "Mon, 13 Jan 2025 20:11:20 GMT",
+                    "Vary": "Accept-Encoding",
+                    "Content-Encoding": "gzip",
+                    "Cache-Control": "max-age=3201",
+                    "Date": "Fri, 27 Jun 2025 04:43:26 GMT",
+                    "Alt-Svc": "h3=\":443\"; ma=93600,h3-29=\":443\"; ma=93600",
+                    "Content-Length": "648",
+                    "Connection": "keep-alive"
+                }
+            }
+        },
+        "additional_info": {}
+    }
+}
