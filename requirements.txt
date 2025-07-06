@@ -8,7 +8,9 @@ termcolor>=1.1.0
 tqdm>=4.62.3
 pretty-tables>=0.7.2
 rich>=10.12.0
-
+whois>=0.9.13
+dnspython>=2.2.1
+python-nmap>=0.7.1
 # مكتبات الأمان
 scapy>=2.4.5
 paramiko>=2.7.2
