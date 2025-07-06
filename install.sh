@@ -1,91 +1,95 @@
-#!/bin/bash
+#!/usr/bin/env pwsh
 
 # SaudiAttacks Installation Script
 # Author: Saudi Linux (SaudiLinux7@gmail.com)
 
 # Colors
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[0;33m'
-BLUE='\033[0;34m'
-MAGENTA='\033[0;35m'
-CYAN='\033[0;36m'
-NC='\033[0m' # No Color
+$RED = "\e[31m"
+$GREEN = "\e[32m"
+$YELLOW = "\e[33m"
+$BLUE = "\e[34m"
+$MAGENTA = "\e[35m"
+$CYAN = "\e[36m"
+$NC = "\e[0m" # No Color
 
-# Check if running as root
-if [ "$(id -u)" -ne 0 ]; then
-    echo -e "${RED}[!] يجب تشغيل هذا السكربت بصلاحيات الجذر (root)${NC}"
-    echo -e "${YELLOW}[i] الرجاء تشغيله باستخدام sudo${NC}"
+# Check if running as administrator
+$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+if (-not $isAdmin) {
+    Write-Host "${RED}[!] يجب تشغيل هذا السكربت بصلاحيات المسؤول${NC}"
+    Write-Host "${YELLOW}[i] الرجاء تشغيله كمسؤول (Run as Administrator)${NC}"
     exit 1
-fi
+}
 
-# Check if running on Linux
-if [ "$(uname)" != "Linux" ]; then
-    echo -e "${RED}[!] هذه الأداة مصممة للعمل على نظام لينكس فقط${NC}"
-    exit 1
-fi
-
-echo -e "${BLUE}==================================================${NC}"
-echo -e "${CYAN}        تثبيت أداة SaudiAttacks        ${NC}"
-echo -e "${CYAN}        المطور: Saudi Linux        ${NC}"
-echo -e "${CYAN}        البريد: SaudiLinux7@gmail.com        ${NC}"
-echo -e "${BLUE}==================================================${NC}"
+Write-Host "${BLUE}==================================================${NC}"
+Write-Host "${CYAN}        تثبيت أداة SaudiAttacks        ${NC}"
+Write-Host "${CYAN}        المطور: Saudi Linux        ${NC}"
+Write-Host "${CYAN}        البريد: SaudiLinux7@gmail.com        ${NC}"
+Write-Host "${BLUE}==================================================${NC}"
 
 # Create directories
-echo -e "${YELLOW}[+] إنشاء المجلدات اللازمة...${NC}"
-mkdir -p logs reports
-chmod 755 logs reports
+Write-Host "${YELLOW}[+] إنشاء المجلدات اللازمة...${NC}"
+New-Item -ItemType Directory -Force -Path logs, reports | Out-Null
 
 # Install system dependencies
-echo -e "${YELLOW}[+] تثبيت متطلبات النظام...${NC}"
+Write-Host "${YELLOW}[+] تثبيت متطلبات النظام...${NC}"
+Write-Host "${GREEN}[i] تم اكتشاف نظام Windows${NC}"
 
-# Detect package manager
-if [ -x "$(command -v apt-get)" ]; then
-    # Debian/Ubuntu
-    echo -e "${GREEN}[i] تم اكتشاف نظام Debian/Ubuntu${NC}"
-    apt-get update
-    apt-get install -y python3 python3-pip python3-venv nmap whois host dnsutils libssl-dev libffi-dev build-essential
-elif [ -x "$(command -v dnf)" ]; then
-    # Fedora/RHEL/CentOS 8+
-    echo -e "${GREEN}[i] تم اكتشاف نظام Fedora/RHEL/CentOS${NC}"
-    dnf install -y python3 python3-pip python3-devel nmap whois bind-utils openssl-devel libffi-devel gcc
-elif [ -x "$(command -v yum)" ]; then
-    # CentOS/RHEL
-    echo -e "${GREEN}[i] تم اكتشاف نظام CentOS/RHEL${NC}"
-    yum install -y python3 python3-pip python3-devel nmap whois bind-utils openssl-devel libffi-devel gcc
-elif [ -x "$(command -v pacman)" ]; then
-    # Arch Linux
-    echo -e "${GREEN}[i] تم اكتشاف نظام Arch Linux${NC}"
-    pacman -Sy --noconfirm python python-pip nmap whois bind openssl libffi
-elif [ -x "$(command -v zypper)" ]; then
-    # openSUSE
-    echo -e "${GREEN}[i] تم اكتشاف نظام openSUSE${NC}"
-    zypper install -y python3 python3-pip python3-devel nmap whois bind-utils libopenssl-devel libffi-devel gcc
-else
-    echo -e "${RED}[!] لم يتم التعرف على مدير الحزم. الرجاء تثبيت المتطلبات يدويًا:${NC}"
-    echo -e "${YELLOW}python3, python3-pip, nmap, whois, host/dig utilities${NC}"
-fi
+# Check if Chocolatey is installed
+if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
+    Write-Host "${YELLOW}[+] تثبيت Chocolatey...${NC}"
+    Set-ExecutionPolicy Bypass -Scope Process -Force
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+    Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    # Refresh environment variables
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+}
+
+# Install required packages using Chocolatey
+Write-Host "${YELLOW}[+] تثبيت البرامج المطلوبة...${NC}"
+choco install -y python3 nmap
+
+# Refresh environment variables
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 # Set up Python virtual environment
-echo -e "${YELLOW}[+] إعداد بيئة Python الافتراضية...${NC}"
-python3 -m venv venv
-source venv/bin/activate
+Write-Host "${YELLOW}[+] إعداد بيئة Python الافتراضية...${NC}"
+python -m venv venv
+
+# Activate virtual environment
+Write-Host "${YELLOW}[+] تفعيل البيئة الافتراضية...${NC}"
+.\venv\Scripts\Activate.ps1
 
 # Install Python dependencies
-echo -e "${YELLOW}[+] تثبيت متطلبات Python...${NC}"
-pip install --upgrade pip
-pip install -r requirements.txt
+Write-Host "${YELLOW}[+] تثبيت متطلبات Python...${NC}"
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 
-# Make the main script executable
-echo -e "${YELLOW}[+] جعل السكربت الرئيسي قابل للتنفيذ...${NC}"
-chmod +x saudi_attacks.py
+# Create a batch file for easy execution
+Write-Host "${YELLOW}[+] إنشاء ملف تشغيل للأداة...${NC}"
+$batchContent = @"
+@echo off
+@REM SaudiAttacks Launcher
+cd /d "%~dp0"
+.\venv\Scripts\python.exe saudi_attacks.py %*
+"@
 
-# Create symbolic link to /usr/local/bin
-echo -e "${YELLOW}[+] إنشاء رابط رمزي في /usr/local/bin...${NC}"
-ln -sf "$(pwd)/saudi_attacks.py" /usr/local/bin/saudi-attacks
+Set-Content -Path "saudi-attacks.bat" -Value $batchContent
 
-echo -e "${GREEN}[✓] تم تثبيت أداة SaudiAttacks بنجاح!${NC}"
-echo -e "${BLUE}==================================================${NC}"
-echo -e "${CYAN}للاستخدام، قم بتشغيل:${NC}"
-echo -e "${YELLOW}saudi-attacks --help${NC}"
-echo -e "${BLUE}==================================================${NC}"
+# Add to PATH (optional)
+$addToPath = Read-Host "${YELLOW}هل تريد إضافة الأداة إلى متغير PATH لتتمكن من تشغيلها من أي مكان؟ (y/n)${NC}"
+if ($addToPath -eq "y") {
+    $currentPath = [Environment]::GetEnvironmentVariable("Path", "User")
+    $scriptDir = (Get-Location).Path
+    if (-not $currentPath.Contains($scriptDir)) {
+        [Environment]::SetEnvironmentVariable("Path", $currentPath + ";" + $scriptDir, "User")
+        Write-Host "${GREEN}[✓] تمت إضافة المجلد إلى متغير PATH${NC}"
+    } else {
+        Write-Host "${YELLOW}[i] المجلد موجود بالفعل في متغير PATH${NC}"
+    }
+}
+
+Write-Host "${GREEN}[✓] تم تثبيت أداة SaudiAttacks بنجاح!${NC}"
+Write-Host "${BLUE}==================================================${NC}"
+Write-Host "${CYAN}للاستخدام، قم بتشغيل:${NC}"
+Write-Host "${YELLOW}.\saudi-attacks.bat --help${NC}"
+Write-Host "${BLUE}==================================================${NC}"

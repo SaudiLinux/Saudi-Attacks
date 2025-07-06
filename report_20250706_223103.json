@@ -1,0 +1,34 @@
+{
+    "info_127.0.0.1": {
+        "dns_info": {},
+        "whois_info": {},
+        "network_info": {
+            "geo": {
+                "ip": "127.0.0.1",
+                "bogon": true
+            },
+            "rbl": {
+                "zen.spamhaus.org": false,
+                "bl.spamcop.net": false,
+                "dnsbl.sorbs.net": false
+            }
+        },
+        "web_info": {
+            "http": {
+                "available": true,
+                "status_code": 404,
+                "title": "No Title",
+                "server": "Microsoft-IIS/10.0",
+                "headers": {
+                    "Server": "Microsoft-IIS/10.0",
+                    "Date": "Sun, 06 Jul 2025 19:31:06 GMT",
+                    "Content-Length": "0"
+                }
+            },
+            "https": {
+                "available": false
+            }
+        },
+        "additional_info": {}
+    }
+}

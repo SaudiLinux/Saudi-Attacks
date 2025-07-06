@@ -1,0 +1,98 @@
+{
+    "info_127.0.0.1": {
+        "dns_info": {},
+        "whois_info": {},
+        "network_info": {
+            "geo": {
+                "ip": "127.0.0.1",
+                "bogon": true
+            },
+            "rbl": {
+                "zen.spamhaus.org": false,
+                "bl.spamcop.net": false,
+                "dnsbl.sorbs.net": false
+            }
+        },
+        "web_info": {
+            "http": {
+                "available": true,
+                "status_code": 404,
+                "title": "No Title",
+                "server": "Microsoft-IIS/10.0",
+                "headers": {
+                    "Server": "Microsoft-IIS/10.0",
+                    "Date": "Sun, 06 Jul 2025 19:32:30 GMT",
+                    "Content-Length": "0"
+                }
+            },
+            "https": {
+                "available": false
+            }
+        },
+        "additional_info": {}
+    },
+    "web_127.0.0.1": {
+        "web_server_info": {
+            "http": {
+                "status_code": 404,
+                "server": "Microsoft-IIS/10.0",
+                "powered_by": "Unknown",
+                "content_type": "Unknown",
+                "title": "No Title",
+                "final_url": "http://127.0.0.1/",
+                "redirect": true,
+                "headers": {
+                    "Server": "Microsoft-IIS/10.0",
+                    "Date": "Sun, 06 Jul 2025 19:32:32 GMT",
+                    "Content-Length": "0"
+                }
+            },
+            "https": {
+                "error": "HTTPSConnectionPool(host='127.0.0.1', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000019A0F5A80D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+            }
+        },
+        "security_headers": {
+            "Strict-Transport-Security": {
+                "present": false
+            },
+            "Content-Security-Policy": {
+                "present": false
+            },
+            "X-Content-Type-Options": {
+                "present": false
+            },
+            "X-Frame-Options": {
+                "present": false
+            },
+            "X-XSS-Protection": {
+                "present": false
+            },
+            "Referrer-Policy": {
+                "present": false
+            },
+            "Feature-Policy": {
+                "present": false
+            },
+            "Permissions-Policy": {
+                "present": false
+            }
+        },
+        "sensitive_files": [],
+        "api_endpoints": [],
+        "input_forms": [],
+        "cors_config": {
+            "headers": {
+                "Access-Control-Allow-Origin": null,
+                "Access-Control-Allow-Credentials": null,
+                "Access-Control-Allow-Methods": null,
+                "Access-Control-Allow-Headers": null,
+                "Access-Control-Expose-Headers": null
+            },
+            "insecure": false
+        },
+        "csp_config": {
+            "header": null,
+            "missing": true
+        }
+    }
+}
